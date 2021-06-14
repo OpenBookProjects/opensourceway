@@ -1,0 +1,15 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="https://github.com/OpenBookProjects/opensourceway" title="开源之道 资源图谱 \n{gen. by Graphviz}v0.210614.2042" alt="" coords="129,35,397,84"/>
+<area shape="rect" id="node2" href="https://opensourceway.community/posts/the_way_of_open_source/open_source_way/" title="开源之道" alt="" coords="5,351,91,389"/>
+<area shape="rect" id="node3" href="https://opensourceway.community/community/communication/" title="沟通渠道" alt="" coords="523,377,609,416"/>
+<area shape="rect" id="node5" href="https://opensourceway.community/community/welcome-to-anyone-contribute/" title="帮助" alt="" coords="227,379,299,417"/>
+<area shape="rect" id="node6" href="https://opensourceway.community/posts/askos/why_we_need_ask/" title="开源之问" alt="" coords="221,441,306,480"/>
+<area shape="rect" id="node7" href="https://opensourceway.community/posts/paper_or_book_reading/2020_book_lists/" title="共读列表" alt="" coords="221,539,306,577"/>
+<area shape="rect" id="node16" href="https://groups.google.com/d/forum/reading-open-source-way" title="google\ngroups" alt="" coords="853,375,925,418"/>
+<area shape="rect" id="node11" href="https://www.opensourceway.community/posts/opensource_talking/2020-02-03-business-embrave-osc/" title="#1 开源开发者有何特征？" alt="" coords="464,267,668,305"/>
+<area shape="rect" id="node12" href="https://www.opensourceway.community/posts/opensource_talking/2020-02-02-open-source-developer/" title="#2 商业公司如何拥抱开源共同体?" alt="" coords="436,204,696,243"/>
+<area shape="rect" id="node9" href="https://www.opensourceway.community/posts/business_model/there_is_no_open_source_business_model/" title="根本就没有什么所谓的开源商业模式" alt="" coords="750,443,1027,481"/>
+<area shape="rect" id="node10" href="https://www.opensourceway.community/posts/supply_chain/supply_chain_case_study_ubuntu/" title="Ubuntu的严重错误" alt="" coords="812,505,965,544"/>
+<area shape="rect" id="node14" href="https://www.opensourceway.community/posts/opensource_talking/2020-02-29-gsoc-in-china" title="#8 Google 编程之夏能否在中国被复制？" alt="" coords="735,204,1043,243"/>
+<area shape="rect" id="node15" href="Episode #9：开源是一门工程学 ———— 图书共读交流" title="#9 开源是一门工程学" alt="" coords="803,141,974,180"/>
+</map>

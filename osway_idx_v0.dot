@@ -1,0 +1,190 @@
+digraph G {
+/*图片生成命令:: need:: apt-get install graphviz-cairo
+$ neato -Tpng osway_idx_v0.dot -o osway_idx_v0.png -Tcmapx -o osway_idx_v0.map
+$ dot -Tpng osway_idx_v0.dot -o osway_idx_v0.png -Tcmapx -o osway_idx_v0.map
+        style=filled,
+        fillcolor=lightyellow,
+        size="12,9",
+        ratio=compress,fill
+        rankdir=LR,        
+*/
+    graph [label=" "
+        , labeljust="l",labelloc="t",center=1
+        , fontsize=14.0
+        , fontname="NotoSansHans-Light.otf"
+        , ranksep=0.4
+        , ratio=compress
+        , fontcolor=snow
+        , bgcolor="#333333"
+        , rankdir=LR,
+        ];
+
+    node[fontsize=12.0
+        , fontname="NotoSansHans-Light.otf"
+        , style="filled,setlinewidth(0.5)"
+        , fillcolor="#333333"
+        , color=gray
+        , fontcolor=snow
+        //, color=gray42,fontcolor=gray33,
+        , height=0.4
+        shape=plaintext,
+        ];
+    /*dir=both,color=yellowgreen,
+            arrowhead=vee,
+        arrowtail=vee,
+        arrowhead=halfopen,
+        arrowtail=halfopen,
+        arrowhead=diamond,
+        arrowtail=diamond,
+    */
+    edge [fontsize=10.0
+        , fontname="NotoSansHans-Light.otf"
+        , fontcolor=gray
+        , color=azure
+        , style="setlinewidth(0.5)"
+        , arrowsize=0.6
+        , dir=both
+        ];
+
+    /*图元声明
+    start       [label="流程开始/结束",shape=point];
+    end         [label="流程开始/结束",shape=point,fillcolor=red];
+
+    box         [label="实体/对象",shape=box];
+    ellipse     [label="行动/节点",shape=ellipse];
+    egg         [label="用户/人物",shape=egg];
+
+    plaintext   [label="状态/属性",shape=plaintext,fillcolor=whitesmoke];
+    diamond     [label="判别",shape=diamond];
+    note        [label="注释",shape=note];
+
+    folder      [label="日志",shape=folder];
+    tab         [label="目录/模块",shape=tab];
+    box3d       [label="数据集",shape=box3d];
+    component   [label="主机/组件",shape=component];
+    db          [label="数据库",shape=Mcircle];
+    */
+    
+    title [label="开源之道 资源图谱 \n{gen. by Graphviz}v0.210614.2042"
+        URL="https://github.com/OpenBookProjects/opensourceway"];
+    
+
+    OSWAY  [label="开源之道"
+        //, shape=ellipse
+        //, style="dotted"
+        , URL="https://opensourceway.community/posts/the_way_of_open_source/open_source_way/"
+        ];
+
+    OSWAY -> {OStouch,Tmouse,help,OSask, OSbook};
+
+    OSask  [label="开源之问"
+            , URL="https://opensourceway.community/posts/askos/why_we_need_ask/"
+        ];
+
+    OSbusiness [label="商业化", shape=tab ];
+    OSb0  [label="根本就没有什么所谓的开源商业模式"
+            , URL="https://www.opensourceway.community/posts/business_model/there_is_no_open_source_business_model/"
+        ];
+    OSb1  [label="Ubuntu的严重错误"
+            , URL="https://www.opensourceway.community/posts/supply_chain/supply_chain_case_study_ubuntu/"
+        ]; 
+
+    OSask->OSbusiness->{OSb0,OSb1};
+
+    subgraph clusterBC {
+        label="播客"; color=blue;fontcolor=blue;
+
+        Tmouse [label="鼠年话开源"
+            //, URL="https://opensourceway.community/community/communication/"
+        ];
+        EP1 [label="#1 开源开发者有何特征？"
+            , URL="https://www.opensourceway.community/posts/opensource_talking/2020-02-03-business-embrave-osc/"
+        ];
+        EP2 [label="#2 商业公司如何拥抱开源共同体?"
+            , URL="https://www.opensourceway.community/posts/opensource_talking/2020-02-02-open-source-developer/"
+        ];
+
+    Tmouse->{EP1,EP2,Talking};
+
+        Talking [label="Talking"
+            //, URL="https://opensourceway.community/community/communication/"
+        ];
+        EP8 [label="#8 Google 编程之夏能否在中国被复制？"
+            , URL="https://www.opensourceway.community/posts/opensource_talking/2020-02-29-gsoc-in-china"
+        ];
+        EP9 [label="#9 开源是一门工程学"
+            , URL="Episode #9：开源是一门工程学 ———— 图书共读交流"
+        ];
+
+    Talking->{EP8,EP9};
+
+    }
+
+    subgraph clusterRB {
+        label="共读"; color=red;fontcolor=red;
+
+        OSbook  [label="共读列表"
+            //, shape=ellipse
+            //, style="dotted"
+            , URL="https://opensourceway.community/posts/paper_or_book_reading/2020_book_lists/"
+        ];
+    //OSask->OSbook;
+
+    }
+
+    subgraph clusterJO {
+        label="参与"; color=green;fontcolor=green;
+
+        help [label="帮助"
+            //, shape=ellipse
+            //, style="dotted"
+            , URL="https://opensourceway.community/community/welcome-to-anyone-contribute/"
+        ];
+        OStouch  [label="沟通渠道"
+            //, shape=ellipse
+            //, style="dotted"
+            , URL="https://opensourceway.community/community/communication/"
+        ];
+        ggrps  [label="google\ngroups"
+            //, shape=ellipse
+            //, style="dotted"
+            , URL="https://groups.google.com/d/forum/reading-open-source-way"
+        ];
+
+        help->OStouch->ggrps;
+    }
+
+    edge [style=invis];
+    OSWAY->title;
+
+    /*流程关系
+    PDB [label="PolarDB",shape=box3d];
+    OSS [label="OSS",shape=box3d];
+            {AP,APM,SAb,DAb,DM,FP}->PDB;
+            {WN0,WN1,WN10,WN1n}->PDB;
+            {WP,SP,WN0,WN1,WN10,WN1n}->OSS->CF;
+
+            style="dashed"
+            color="green",
+            fontcolor="green"
+    DATA_3p [label="第三方数据",shape=tab];
+        DATA_3p->LOG_usr[label="??"];
+    OT_matterN [label="非广告业务数据...N",shape=tab];
+        OT_matterN->DATA_hline;
+    OT_matter0 [label="非广告业务数据0",shape=tab];
+    OT_matter1 [label="非广告业务数据1",shape=tab];
+        
+    subgraph clusterG {
+        label="Google 提供的服务s"; color=blue;fontcolor=blue;
+        cpugml;
+        obpsite->obpwiki    [label=""];
+            obpsite->obpsvn     [label=""];
+            obpsite->obpissue   [label=""];
+            obpsite->obpml      [label=""];
+        obpsvn->obpml;
+        obpissue->obpml;
+    }
+    */
+
+}
+
